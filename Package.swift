@@ -9,10 +9,14 @@
          .executable(name: "dockey", targets: ["dockey"])
      ],
      dependencies: [
-         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.3.0"),
+        .package(url: "https://github.com/groue/GRDB.swift.git", from: "6.27.0"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.3.0"),
      ],
      targets: [
-         .target(name: "CoreKit"),
+         .target(
+            name: "CoreKit",
+            dependencies: [.product(name: "GRDB", package: "GRDB.swift")]
+         ),
          .executableTarget(
              name: "dockey",
              dependencies: [
