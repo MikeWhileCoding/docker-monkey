@@ -30,6 +30,12 @@ public final class ProjectStore {
             return p.id!
         }
     }
+    
+    public func deleteProject(id: Int64) throws {
+        try db.write { db in
+            _ = try Project.deleteOne(db, key: id)
+        }
+    }
 
     public func fetchProject(named name: String) throws -> Project? {
         try db.read { db in
@@ -41,12 +47,6 @@ public final class ProjectStore {
         try db.read { db in try Project.order(Column("name")).fetchAll(db) }
     }
 
-    public func deleteProject(id: Int64) throws {
-        try db.write { db in
-            _ = try Project.deleteOne(db, key: id)
-        }
-    }
-
     // MARK: Containers
     @discardableResult
     public func upsertContainer(projectId: Int64, name: String, shell: ShellType) throws -> Int64 {
@@ -54,6 +54,12 @@ public final class ProjectStore {
             var c = Container(id: nil, projectId: projectId, name: name, shell: shell, createdAt: Date(), updatedAt: Date())
             try c.save(db)
             return c.id!
+        }
+    }
+    
+    public func deleteContainer(id: Int64) throws {
+        try db.write { db in
+            _ = try Container.deleteOne(db, key: id)
         }
     }
 
@@ -70,6 +76,12 @@ public final class ProjectStore {
             var cmd = Command(id: nil, projectId: projectId, containerId: containerId, name: name, script: script, createdAt: Date(), updatedAt: Date())
             try cmd.save(db)
             return cmd.id!
+        }
+    }
+    
+    public func deleteCommand(id: Int64) throws {
+        try db.write { db in
+            _ = try Command.deleteOne(db, key: id)
         }
     }
 
