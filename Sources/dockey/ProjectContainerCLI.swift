@@ -18,7 +18,10 @@ struct ProjectContainerCLI: ParsableCommand {
 }
 
 struct ContainerAdd: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "Add a container")
+    static var configuration = CommandConfiguration(
+        commandName: "add",
+        abstract: "Add a container"
+    )
 
     @Argument(help: "Project name") var project: String
     @Argument(help: "Container name") var name: String
@@ -37,7 +40,10 @@ struct ContainerAdd: ParsableCommand {
 }
 
 struct ContainerList: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "List containers for a project")
+    static var configuration = CommandConfiguration(
+        commandName: "list",
+        abstract: "List containers for a project"
+    )
 
     @Argument(help: "Project name") var project: String
 
@@ -58,7 +64,10 @@ struct ContainerList: ParsableCommand {
 }
 
 struct ContainerRemove: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "Remove a container")
+    static var configuration = CommandConfiguration(
+        commandName: "rm",
+        abstract: "Remove a container"
+    )
 
     @Argument(help: "Project name") var project: String
     @Argument(help: "Container name") var name: String

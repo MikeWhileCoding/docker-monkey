@@ -18,7 +18,10 @@ struct ProjectCommandCLI: ParsableCommand {
 }
 
 struct CommandAdd: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "Add a command")
+    static var configuration = CommandConfiguration(
+        commandName: "add",
+        abstract: "Add a command"
+    )
 
     @Argument(help: "Project name") var project: String
     @Argument(help: "Command name") var name: String
@@ -44,7 +47,10 @@ struct CommandAdd: ParsableCommand {
 }
 
 struct CommandList: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "List commands in a project")
+    static var configuration = CommandConfiguration(
+        commandName: "list",
+        abstract: "List commands in a project"
+    )
 
     @Argument(help: "Project name") var project: String
 
@@ -66,7 +72,10 @@ struct CommandList: ParsableCommand {
 }
 
 struct CommandRemove: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "Remove a command")
+    static var configuration = CommandConfiguration(
+        commandName: "rm",
+        abstract: "Remove a command"
+    )
 
     @Argument(help: "Project name") var project: String
     @Argument(help: "Command name") var name: String
@@ -86,7 +95,10 @@ struct CommandRemove: ParsableCommand {
 }
 
 struct CommandRun: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "Run a command")
+    static var configuration = CommandConfiguration(
+        commandName: "run",
+        abstract: "Run a command"
+    )
 
     @Argument(help: "Project name") var project: String
     @Argument(help: "Command name") var name: String

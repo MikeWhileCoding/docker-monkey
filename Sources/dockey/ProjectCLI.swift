@@ -20,7 +20,10 @@ struct ProjectCLI: ParsableCommand {
 
 // MARK: Project operations
 struct ProjectAdd: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "Add a new project")
+    static var configuration = CommandConfiguration(
+        commandName: "add",
+        abstract: "Add a new project"
+    )
 
     @Argument(help: "Project name") var name: String
     @Option(name: .shortAndLong, help: "Root directory") var root: String?
@@ -34,7 +37,10 @@ struct ProjectAdd: ParsableCommand {
 }
 
 struct ProjectList: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "List projects")
+    static var configuration = CommandConfiguration(
+        commandName: "list",
+        abstract: "List projects"
+    )
 
     func run() throws {
         let store = ProjectStore()
@@ -50,7 +56,10 @@ struct ProjectList: ParsableCommand {
 }
 
 struct ProjectRemove: ParsableCommand {
-    static var configuration = CommandConfiguration(abstract: "Remove a project")
+    static var configuration = CommandConfiguration(
+        commandName: "rm",
+        abstract: "Remove a project"
+    )
 
     @Argument(help: "Project name") var name: String
 

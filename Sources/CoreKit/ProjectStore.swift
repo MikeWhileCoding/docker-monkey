@@ -25,12 +25,24 @@ public final class ProjectStore {
     @discardableResult
     public func upsertProject(name: String, rootPath: String) throws -> Int64 {
         try db.write { db in
+            // If it exists, update and return its id
+            if var existing = try Project.filter(Column("name") == name).fetchOne(db) {
+                existing.rootPath = rootPath
+                existing.updatedAt = Date()
+                try existing.update(db)
+                return existing.id! // safe: existing came from DB
+            }
+
+            // Else insert new and return new id
             var p = Project(id: nil, name: name, rootPath: rootPath, createdAt: Date(), updatedAt: Date())
-            try p.save(db)
-            return p.id!
+            try p.insert(db)                 // <- mutating insert sets p.id
+            guard let id = p.id else {
+                throw NSError(domain: "Dockey", code: 1, userInfo: [NSLocalizedDescriptionKey: "Insert did not produce an id"])
+            }
+            return id
         }
     }
-    
+
     public func deleteProject(id: Int64) throws {
         try db.write { db in
             _ = try Project.deleteOne(db, key: id)
@@ -48,12 +60,21 @@ public final class ProjectStore {
     }
 
     // MARK: Containers
-    @discardableResult
     public func upsertContainer(projectId: Int64, name: String, shell: ShellType) throws -> Int64 {
         try db.write { db in
+            if var existing = try Container
+                .filter(Column("projectId") == projectId && Column("name") == name)
+                .fetchOne(db) {
+                existing.shell = shell
+                existing.updatedAt = Date()
+                try existing.update(db)
+                return existing.id!
+            }
+
             var c = Container(id: nil, projectId: projectId, name: name, shell: shell, createdAt: Date(), updatedAt: Date())
-            try c.save(db)
-            return c.id!
+            try c.insert(db)
+            guard let id = c.id else { throw NSError(domain: "Dockey", code: 2, userInfo: [NSLocalizedDescriptionKey: "Insert did not produce an id"]) }
+            return id
         }
     }
     
@@ -73,9 +94,20 @@ public final class ProjectStore {
     @discardableResult
     public func upsertCommand(projectId: Int64, containerId: Int64?, name: String, script: String) throws -> Int64 {
         try db.write { db in
+            if var existing = try Command
+                .filter(Column("projectId") == projectId && Column("name") == name)
+                .fetchOne(db) {
+                existing.containerId = containerId
+                existing.script = script
+                existing.updatedAt = Date()
+                try existing.update(db)
+                return existing.id!
+            }
+
             var cmd = Command(id: nil, projectId: projectId, containerId: containerId, name: name, script: script, createdAt: Date(), updatedAt: Date())
-            try cmd.save(db)
-            return cmd.id!
+            try cmd.insert(db)
+            guard let id = cmd.id else { throw NSError(domain: "Dockey", code: 3, userInfo: [NSLocalizedDescriptionKey: "Insert did not produce an id"]) }
+            return id
         }
     }
     

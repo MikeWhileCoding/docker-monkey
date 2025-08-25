@@ -1,7 +1,6 @@
 import ArgumentParser
 import CoreKit
 
-@main
 struct DockeyCLI: ParsableCommand {
     static var configuration = CommandConfiguration(
         commandName: "dockey",
@@ -9,3 +8,5 @@ struct DockeyCLI: ParsableCommand {
         subcommands: [ProjectCLI.self]
     )
 }
+
+DockeyCLI.main()
