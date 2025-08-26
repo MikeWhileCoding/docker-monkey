@@ -9,7 +9,17 @@ import Foundation
 import GRDB
 
 public enum ShellType: String, Codable, CaseIterable {
-    case zsh, bash, fish
+    case bash
+    case sh
+    
+    var executable: String {
+        switch self {
+        case .bash:
+            return "bash"
+        case .sh:
+            return "/bin/sh"
+        }
+    }
 }
 
 public struct Project: Codable, FetchableRecord, MutablePersistableRecord, Identifiable, Equatable {

@@ -35,17 +35,19 @@ public final class ProjectStore {
 
             // Else insert new and return new id
             var p = Project(id: nil, name: name, rootPath: rootPath, createdAt: Date(), updatedAt: Date())
-            try p.insert(db)                 // <- mutating insert sets p.id
-            guard let id = p.id else {
-                throw NSError(domain: "Dockey", code: 1, userInfo: [NSLocalizedDescriptionKey: "Insert did not produce an id"])
-            }
+            try db.execute(
+                sql: "INSERT INTO project (name, rootPath, createdAt, updatedAt) VALUES (?, ?, ?, ?)",
+                arguments: [p.name, p.rootPath, p.createdAt, p.updatedAt]
+            )
+            let id = db.lastInsertedRowID
+            
             return id
         }
     }
 
     public func deleteProject(id: Int64) throws {
         try db.write { db in
-            _ = try Project.deleteOne(db, key: id)
+            _ = try db.execute(sql: "DELETE FROM project WHERE id = ?", arguments: [id])
         }
     }
 
@@ -72,15 +74,20 @@ public final class ProjectStore {
             }
 
             var c = Container(id: nil, projectId: projectId, name: name, shell: shell, createdAt: Date(), updatedAt: Date())
-            try c.insert(db)
-            guard let id = c.id else { throw NSError(domain: "Dockey", code: 2, userInfo: [NSLocalizedDescriptionKey: "Insert did not produce an id"]) }
+            try db.execute(
+                sql: "INSERT INTO container (projectId, name, shell, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?)",
+                arguments: [c.projectId, c.name, c.shell.executable, c.createdAt, c.updatedAt]
+            )
+            let id = db.lastInsertedRowID
             return id
         }
     }
     
     public func deleteContainer(id: Int64) throws {
         try db.write { db in
-            _ = try Container.deleteOne(db, key: id)
+            try db.execute(
+                sql: "DELETE FROM container WHERE id = ?", arguments: [id]
+            )
         }
     }
 
@@ -105,15 +112,21 @@ public final class ProjectStore {
             }
 
             var cmd = Command(id: nil, projectId: projectId, containerId: containerId, name: name, script: script, createdAt: Date(), updatedAt: Date())
-            try cmd.insert(db)
-            guard let id = cmd.id else { throw NSError(domain: "Dockey", code: 3, userInfo: [NSLocalizedDescriptionKey: "Insert did not produce an id"]) }
+            try db.execute(
+                sql: "INSERT INTO command (projectId, containerId, name, script, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?, ?)",
+                arguments: [cmd.projectId, cmd.containerId ?? NSNull(), cmd.name, cmd.script, cmd.createdAt, cmd.updatedAt]
+            )
+            let id = db.lastInsertedRowID
             return id
         }
     }
     
     public func deleteCommand(id: Int64) throws {
         try db.write { db in
-            _ = try Command.deleteOne(db, key: id)
+            try db.execute(
+                sql: "DELETE FROM command WHERE id = ?",
+                arguments: [id]
+            )
         }
     }
 

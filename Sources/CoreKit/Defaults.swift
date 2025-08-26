@@ -11,7 +11,7 @@ public struct Defaults: Codable, Equatable {
     public var defaultShell: ShellType
     public var defaultProjectRoot: String
 
-    public init(defaultShell: ShellType = .zsh,
+    public init(defaultShell: ShellType = .bash,
                 defaultProjectRoot: String = FileManager.default.currentDirectoryPath) {
         self.defaultShell = defaultShell
         self.defaultProjectRoot = defaultProjectRoot
