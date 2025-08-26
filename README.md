@@ -10,10 +10,10 @@ _Innitial plan is to execute shell commands from the application, with the optio
 - Quick navigation to project domain(s)
 
 ## ✅ Implemented features
-- [ ] CLI For managing projects
-- [ ] CLI For managing project containers
-- [ ] CLI For managing project commands
-- [ ] CLI For running commands
+- [x] CLI For managing projects
+- [x] CLI For managing project containers
+- [x] CLI For managing project commands
+- [x] CLI For running commands
 - [ ] Menubar UI for running commands
 - [ ] CLI For viewing project status (online, offline, error)
 - [ ] CLI for managing project status
