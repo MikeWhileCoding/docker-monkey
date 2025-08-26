@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		270D41992E5CC132007745BD /* CoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 270D41982E5CC132007745BD /* CoreKit */; };
+		270D419D2E5CDF3D007745BD /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D419C2E5CDF3D007745BD /* Models.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		270D417A2E5CC08C007745BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 270D41632E5CC08B007745BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 270D416A2E5CC08B007745BD;
+			remoteInfo = Dockey;
+		};
+		270D41842E5CC08C007745BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 270D41632E5CC08B007745BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 270D416A2E5CC08B007745BD;
+			remoteInfo = Dockey;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		270D416B2E5CC08B007745BD /* Dockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		270D41792E5CC08C007745BD /* DockeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		270D41832E5CC08C007745BD /* DockeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		270D419C2E5CDF3D007745BD /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Models.swift; path = ../../Sources/CoreKit/Models.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		270D416D2E5CC08B007745BD /* Dockey */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Dockey;
+			sourceTree = "<group>";
+		};
+		270D417C2E5CC08C007745BD /* DockeyTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DockeyTests;
+			sourceTree = "<group>";
+		};
+		270D41862E5CC08C007745BD /* DockeyUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DockeyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		270D41682E5CC08B007745BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270D41992E5CC132007745BD /* CoreKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270D41762E5CC08C007745BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270D41802E5CC08C007745BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		270D41622E5CC08B007745BD = {
+			isa = PBXGroup;
+			children = (
+				270D419C2E5CDF3D007745BD /* Models.swift */,
+				270D416D2E5CC08B007745BD /* Dockey */,
+				270D417C2E5CC08C007745BD /* DockeyTests */,
+				270D41862E5CC08C007745BD /* DockeyUITests */,
+				270D41972E5CC132007745BD /* Frameworks */,
+				270D416C2E5CC08B007745BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		270D416C2E5CC08B007745BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				270D416B2E5CC08B007745BD /* Dockey.app */,
+				270D41792E5CC08C007745BD /* DockeyTests.xctest */,
+				270D41832E5CC08C007745BD /* DockeyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		270D41972E5CC132007745BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		270D416A2E5CC08B007745BD /* Dockey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 270D418D2E5CC08C007745BD /* Build configuration list for PBXNativeTarget "Dockey" */;
+			buildPhases = (
+				270D41672E5CC08B007745BD /* Sources */,
+				270D41682E5CC08B007745BD /* Frameworks */,
+				270D41692E5CC08B007745BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				270D416D2E5CC08B007745BD /* Dockey */,
+			);
+			name = Dockey;
+			packageProductDependencies = (
+				270D41982E5CC132007745BD /* CoreKit */,
+			);
+			productName = Dockey;
+			productReference = 270D416B2E5CC08B007745BD /* Dockey.app */;
+			productType = "com.apple.product-type.application";
+		};
+		270D41782E5CC08C007745BD /* DockeyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 270D41902E5CC08C007745BD /* Build configuration list for PBXNativeTarget "DockeyTests" */;
+			buildPhases = (
+				270D41752E5CC08C007745BD /* Sources */,
+				270D41762E5CC08C007745BD /* Frameworks */,
+				270D41772E5CC08C007745BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				270D417B2E5CC08C007745BD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				270D417C2E5CC08C007745BD /* DockeyTests */,
+			);
+			name = DockeyTests;
+			packageProductDependencies = (
+			);
+			productName = DockeyTests;
+			productReference = 270D41792E5CC08C007745BD /* DockeyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		270D41822E5CC08C007745BD /* DockeyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 270D41932E5CC08C007745BD /* Build configuration list for PBXNativeTarget "DockeyUITests" */;
+			buildPhases = (
+				270D417F2E5CC08C007745BD /* Sources */,
+				270D41802E5CC08C007745BD /* Frameworks */,
+				270D41812E5CC08C007745BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				270D41852E5CC08C007745BD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				270D41862E5CC08C007745BD /* DockeyUITests */,
+			);
+			name = DockeyUITests;
+			packageProductDependencies = (
+			);
+			productName = DockeyUITests;
+			productReference = 270D41832E5CC08C007745BD /* DockeyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		270D41632E5CC08B007745BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					270D416A2E5CC08B007745BD = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					270D41782E5CC08C007745BD = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 270D416A2E5CC08B007745BD;
+					};
+					270D41822E5CC08C007745BD = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 270D416A2E5CC08B007745BD;
+					};
+				};
+			};
+			buildConfigurationList = 270D41662E5CC08B007745BD /* Build configuration list for PBXProject "Dockey" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 270D41622E5CC08B007745BD;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				270D41962E5CC0FB007745BD /* XCLocalSwiftPackageReference "../../../docker-monkey" */,
+				270D419E2E5CE76B007745BD /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 270D416C2E5CC08B007745BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				270D416A2E5CC08B007745BD /* Dockey */,
+				270D41782E5CC08C007745BD /* DockeyTests */,
+				270D41822E5CC08C007745BD /* DockeyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		270D41692E5CC08B007745BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270D41772E5CC08C007745BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270D41812E5CC08C007745BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		270D41672E5CC08B007745BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270D419D2E5CDF3D007745BD /* Models.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270D41752E5CC08C007745BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270D417F2E5CC08C007745BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		270D417B2E5CC08C007745BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 270D416A2E5CC08B007745BD /* Dockey */;
+			targetProxy = 270D417A2E5CC08C007745BD /* PBXContainerItemProxy */;
+		};
+		270D41852E5CC08C007745BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 270D416A2E5CC08B007745BD /* Dockey */;
+			targetProxy = 270D41842E5CC08C007745BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		270D418B2E5CC08C007745BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		270D418C2E5CC08C007745BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		270D418E2E5CC08C007745BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dockey/Dockey.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mikedegroot.Dockey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		270D418F2E5CC08C007745BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dockey/Dockey.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mikedegroot.Dockey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		270D41912E5CC08C007745BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mikedegroot.DockeyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dockey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dockey";
+			};
+			name = Debug;
+		};
+		270D41922E5CC08C007745BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mikedegroot.DockeyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dockey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dockey";
+			};
+			name = Release;
+		};
+		270D41942E5CC08C007745BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mikedegroot.DockeyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Dockey;
+			};
+			name = Debug;
+		};
+		270D41952E5CC08C007745BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mikedegroot.DockeyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Dockey;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		270D41662E5CC08B007745BD /* Build configuration list for PBXProject "Dockey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270D418B2E5CC08C007745BD /* Debug */,
+				270D418C2E5CC08C007745BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		270D418D2E5CC08C007745BD /* Build configuration list for PBXNativeTarget "Dockey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270D418E2E5CC08C007745BD /* Debug */,
+				270D418F2E5CC08C007745BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		270D41902E5CC08C007745BD /* Build configuration list for PBXNativeTarget "DockeyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270D41912E5CC08C007745BD /* Debug */,
+				270D41922E5CC08C007745BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		270D41932E5CC08C007745BD /* Build configuration list for PBXNativeTarget "DockeyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270D41942E5CC08C007745BD /* Debug */,
+				270D41952E5CC08C007745BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		270D41962E5CC0FB007745BD /* XCLocalSwiftPackageReference "../../../docker-monkey" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../docker-monkey";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		270D419E2E5CE76B007745BD /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		270D41982E5CC132007745BD /* CoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270D41962E5CC0FB007745BD /* XCLocalSwiftPackageReference "../../../docker-monkey" */;
+			productName = CoreKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 270D41632E5CC08B007745BD /* Project object */;
+}
