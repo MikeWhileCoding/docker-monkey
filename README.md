@@ -15,15 +15,23 @@ A macOS menu bar tool for managing local Docker-based projects. Designed for UI/
 
 ### CLI Installation (Optional)
 
-The CLI tool `dockey` can be installed alongside the app for terminal usage:
+The CLI tool `dockey` is built separately from the Swift package. To install:
 
 ```bash
-# Option 1: Symlink to /usr/local/bin (recommended)
-sudo ln -sf /Applications/Dockey.app/Contents/MacOS/dockey /usr/local/bin/dockey
+# Navigate to the project
+cd /path/to/docker-monkey
 
-# Option 2: Add to PATH in your ~/.zshrc
-echo 'export PATH="/Applications/Dockey.app/Contents/MacOS:$PATH"' >> ~/.zshrc
-source ~/.zshrc
+# Build the CLI
+swift build -c release
+
+# Copy to /usr/local/bin
+sudo cp .build/release/dockey /usr/local/bin/dockey
+```
+
+Or for development (symlink):
+```bash
+swift build
+sudo ln -sf "$(pwd)/.build/debug/dockey" /usr/local/bin/dockey
 ```
 
 Verify installation:
