@@ -112,6 +112,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 270D418D2E5CC08C007745BD /* Build configuration list for PBXNativeTarget "Dockey" */;
 			buildPhases = (
+				276CCB822F1E6F060045B97F /* ShellScript */,
 				270D41672E5CC08B007745BD /* Sources */,
 				270D41682E5CC08B007745BD /* Frameworks */,
 				270D41692E5CC08B007745BD /* Resources */,
@@ -248,6 +249,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		276CCB822F1E6F060045B97F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Build CLI from Swift package\ncd \"${PROJECT_DIR}/../..\"\nswift build -c release\n\n# Copy to app bundle\ncp .build/release/dockey \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Contents/MacOS/dockey-cli\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		270D41672E5CC08B007745BD /* Sources */ = {

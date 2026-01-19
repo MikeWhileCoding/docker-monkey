@@ -15,15 +15,11 @@ A macOS menu bar tool for managing local Docker-based projects. Designed for UI/
 
 ### CLI Installation (Optional)
 
-The CLI tool `dockey` can be installed alongside the app for terminal usage:
+The CLI tool `dockey` is bundled inside the app. To make it available in your terminal:
 
 ```bash
-# Option 1: Symlink to /usr/local/bin (recommended)
-sudo ln -sf /Applications/Dockey.app/Contents/MacOS/dockey /usr/local/bin/dockey
-
-# Option 2: Add to PATH in your ~/.zshrc
-echo 'export PATH="/Applications/Dockey.app/Contents/MacOS:$PATH"' >> ~/.zshrc
-source ~/.zshrc
+# Symlink the bundled CLI to /usr/local/bin
+sudo ln -sf /Applications/Dockey.app/Contents/MacOS/dockey-cli /usr/local/bin/dockey
 ```
 
 Verify installation:
