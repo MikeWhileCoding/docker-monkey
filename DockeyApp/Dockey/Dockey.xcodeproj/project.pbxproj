@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		270D41992E5CC132007745BD /* CoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 270D41982E5CC132007745BD /* CoreKit */; };
-		270D419D2E5CDF3D007745BD /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D419C2E5CDF3D007745BD /* Models.swift */; };
+		270D41C52E5D8FC9007745BD /* CoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 270D41C42E5D8FC9007745BD /* CoreKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +31,6 @@
 		270D416B2E5CC08B007745BD /* Dockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		270D41792E5CC08C007745BD /* DockeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		270D41832E5CC08C007745BD /* DockeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		270D419C2E5CDF3D007745BD /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Models.swift; path = ../../Sources/CoreKit/Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -58,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				270D41992E5CC132007745BD /* CoreKit in Frameworks */,
+				270D41C52E5D8FC9007745BD /* CoreKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +80,6 @@
 		270D41622E5CC08B007745BD = {
 			isa = PBXGroup;
 			children = (
-				270D419C2E5CDF3D007745BD /* Models.swift */,
 				270D416D2E5CC08B007745BD /* Dockey */,
 				270D417C2E5CC08C007745BD /* DockeyTests */,
 				270D41862E5CC08C007745BD /* DockeyUITests */,
@@ -128,7 +125,7 @@
 			);
 			name = Dockey;
 			packageProductDependencies = (
-				270D41982E5CC132007745BD /* CoreKit */,
+				270D41C42E5D8FC9007745BD /* CoreKit */,
 			);
 			productName = Dockey;
 			productReference = 270D416B2E5CC08B007745BD /* Dockey.app */;
@@ -257,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				270D419D2E5CDF3D007745BD /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +579,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		270D41982E5CC132007745BD /* CoreKit */ = {
+		270D41C42E5D8FC9007745BD /* CoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 270D41962E5CC0FB007745BD /* XCLocalSwiftPackageReference "../../../docker-monkey" */;
 			productName = CoreKit;
