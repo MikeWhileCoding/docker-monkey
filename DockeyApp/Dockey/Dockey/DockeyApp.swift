@@ -9,26 +9,23 @@ import CoreKit
 
 @main
 struct DockeyApp: App {
-    @State private var latest = "Ready"
+    @StateObject private var model = MenuModel()
 
     var body: some Scene {
         MenuBarExtra("Dockey", systemImage: "hammer") {
-            Button {
-                Task {
-                    do {
-                        let (_, out, _) = try Shell.run("/bin/echo", ["Build triggered"])
-                        latest = out.trimmingCharacters(in: .whitespacesAndNewlines)
-                    } catch {
-                        latest = "Error: \\(error)"
-                    }
-                }
-            } label: { Label("Build", systemImage: "wrench.and.screwdriver") }
-
-            Divider()
-            Text(latest).font(.footnote).foregroundStyle(.secondary)
-            Divider()
-            Button("Quit") { NSApplication.shared.terminate(nil) }
+            MenuContent(model: model)
         }
         .menuBarExtraStyle(.window)
+
+        Settings {
+            SettingsView(model: model)
+        }
+
+        Window("Dockey Log", id: "log") {
+            LogView(model: model)
+                .frame(minWidth: 640, minHeight: 380)
+        }
+        .defaultPosition(.center)
+        .defaultSize(width: 700, height: 420)
     }
 }
