@@ -1,10 +1,90 @@
-# 🐒 docker-monkey
-Docker Monkey (Dockey) is a tool for both cli and MacOS menubar to assist in managing local docker based Laravel projects.
-_Innitial plan is to execute shell commands from the application, with the option to configure project directories and commands._
+# 🐒 Docker Monkey (Dockey)
 
-## 📋 Planned features:
-- Allow management for projects (root directory, name, containers)
-- Allow for management of commands (display in menubar, arguments, etc...)
-- Execute set commands from the menubar
-- Check project status in menubar
-- Quick navigation to project domain(s)
+A macOS menu bar tool for managing local Docker-based projects. Designed for UI/UX designers and developers who want quick access to Docker commands without the terminal.
+
+## 📦 Installation
+
+### App Installation
+
+1. Download the latest `Dockey.dmg` from releases
+2. Open the DMG and drag `Dockey.app` to `/Applications`
+3. Launch Dockey from Applications (or Spotlight)
+4. The app will appear in your menu bar with a 🔨 icon
+
+> **First Launch**: macOS may show a security warning. Go to **System Preferences → Privacy & Security** and click "Open Anyway".
+
+### CLI Installation (Optional)
+
+The CLI tool `dockey` can be installed alongside the app for terminal usage:
+
+```bash
+# Option 1: Symlink to /usr/local/bin (recommended)
+sudo ln -sf /Applications/Dockey.app/Contents/MacOS/dockey /usr/local/bin/dockey
+
+# Option 2: Add to PATH in your ~/.zshrc
+echo 'export PATH="/Applications/Dockey.app/Contents/MacOS:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+Verify installation:
+```bash
+dockey --help
+```
+
+## 🚀 Usage
+
+### Menu Bar App
+
+- Click the menu bar icon to see all projects
+- Run commands directly from the dropdown
+- Access **Settings** to manage projects, containers, and commands
+- Use the **Test** button in Settings to preview command output
+
+### CLI Commands
+
+```bash
+# Projects
+dockey project add "MyProject" --root /path/to/project
+dockey project list
+dockey project rm "MyProject"
+
+# Containers
+dockey project container add "MyProject" "mysql" --shell bash
+dockey project container list "MyProject"
+
+# Commands
+dockey project command add "MyProject" "up" --script "docker compose up -d"
+dockey project command add "MyProject" "down" --script "docker compose down"
+dockey project command run "MyProject" "up"
+```
+
+## ✨ Features
+
+- [x] Menu bar quick access to all projects
+- [x] Run Docker commands with one click
+- [x] Settings page for project/container/command management
+- [x] Test commands with live console output
+- [x] CLI tool for terminal users
+- [ ] Project status indicators
+- [ ] Quick navigation to project domains
+
+## 🔄 Updates
+
+When you receive a new version:
+1. Download the new `Dockey.dmg`
+2. Quit the running app (Menu Bar → Quit Dockey)
+3. Replace the app in `/Applications`
+4. Relaunch
+
+## 📋 For Developers
+
+See [DISTRIBUTION.md](DISTRIBUTION.md) for packaging and distribution instructions.
+
+```bash
+# Build CLI
+swift build
+
+# Run CLI during development
+swift run dockey project list
+```
+
